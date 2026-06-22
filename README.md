@@ -39,14 +39,16 @@ wget https://raw.githubusercontent.com/LeaoMartelo2/LogNest/main/lognest.h
 ```
 <sub> The separators (`[]`) around the type must also be included here. </sub>
 
+- Disable either the date or time of the log with:
+```c
+#define LOGNEST_DISABLE_DATESTAMP
+#define LOGNEST_DISABLE_TIMESTAMP
+```
+
 ![image](images/usage2.png)
 
 ## Latest update changes:
 
-### LogNest 3.0.0
+### LogNest 3.1.0
 
-- Rewrite the whole library from scratch
-- This is a regression in some functionality, but strictly to non-important / easily re-implementable
-
-- Removed: `LOGNEST_FILE` macro, `LOGNEST_DISABLE` for timestamp and datestamp, and `ALLOW_CRASH`
-
+- Reintroduced `LOGNEST_DISABLE_TIMESTAMP` and `LOGNEST_DISABLE_DATESTAMP`

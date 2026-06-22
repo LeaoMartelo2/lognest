@@ -1,6 +1,7 @@
 #define LOGNEST_DISABLE_DEBUG
 #define LOGNEST_WARN_PREFIX "[warning]"
 #define LOGNEST_IMPLEMENTATION
+#define LOGNEST_DISABLE_TIMESTAMP
 #include "../lognest.h"
 
 int main(void) {

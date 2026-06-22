@@ -1,3 +1,7 @@
+### LogNest 3.1.0
+
+- Reintroduced `LOGNEST_DISABLE_TIMESTAMP` and `LOGNEST_DISABLE_DATESTAMP`
+
 ### LogNest 3.0.0
 
 - Rewrite the whole library from scratch

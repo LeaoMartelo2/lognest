@@ -130,12 +130,19 @@ static void lognest__to_file(const char *level, const char *fmt, va_list args) {
 
     FILE *out = lognest__file ? lognest__file : stdout;
 
+
     char timestamp[32] = {};
-    lognest__get_timestamp(timestamp, sizeof(timestamp));
-
     char datestamp[32] = {};
-    lognest__get_datestamp(datestamp, sizeof(datestamp));
 
+
+#ifndef LOGNEST_DISABLE_TIMESTAMP
+    lognest__get_timestamp(timestamp, sizeof(timestamp));
+#endif /* LOGNEST_DISABLE_TIMESTAMP */
+
+
+#ifndef LOGNEST_DISABLE_DATESTAMP
+    lognest__get_datestamp(datestamp, sizeof(datestamp));
+#endif /* LOGNEST_DISABLE_DATESTAMP */
     
     fprintf(out, "%s%s%s: ", datestamp, timestamp, level);
     vfprintf(out, fmt, args);
